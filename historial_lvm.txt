@@ -1,0 +1,65 @@
+    1  pwd
+    2  ssh-keygen -t ed25519
+    3  ls -la
+    4  ls -l .ssh/
+    5  cat $HOME/ .ssh/*.pub
+    6  pwd
+    7  mkdir repogit
+    8  ls -l
+    9  cd repogit/
+   10  git clone git@github.com:MauroT9/TP2_Mauro_Torres.git
+   11  ls -l
+   12  cd TP2_Mauro_Torres/
+   13  git add .
+   14  sit status
+   15  git config --global user.email mauro.ez99@gmail.com
+   16  git config --global user.name Mauro
+   17  git add .
+   18  git status
+   19  pwd
+   20  sudo fdisk -l
+   21  sudo fdisk /dev/sdd
+   22  free
+   23  free -h
+   24  sudo mkswap /dev/sdd1
+   25  free -h
+   26  sudo swapon /dev/sdd1
+   27  free -h
+   28  swapon -s
+   29  sudo fdisk /dev/sdc
+   30  sudo wipefs -a /dev/sdc1
+   31  sudo wipefs -a /dev/sdc2
+   32  sudo wipefs -a /dev/sdd2
+   33  sudo wipefs -a /dev/sdd3
+   34  sudo wipefs -a /dev/sdd5
+   35  sudo wipefs -a /dev/sdd6
+   36  sudo pvcreate /dev/ssd2 /dev/ssd3 /dev/ssd5 /dev/ssd6 /dev/sdc1 /dev/sdc2
+   37  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6
+   38  sudo pvs
+   39  sudo vgcreate vg_datos /dev/sdc1 /dev/sdc2
+   40  sudo vgs
+   41  sudo pvs
+   42  sudo vgcreate vg_web /dev/sdc2
+   43  sudo vgremove vg_web /dev/sdc2
+   44  sudo vgremove vg_datos /dev/sdc2
+   45  sudo pvs
+   46  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   47  pvs
+   48  sudo pvs
+   49  sudo vgremove vg_web /dev/sdc2
+   50  sudo vcreate vg_web /dev/sdc2
+   51  sudo vgcreate vg_web /dev/sdc2
+   52  sudo pvs
+   53  sudo lvcreate -L 1G vg_web -n lv_web1
+   54  sudo lvcreate -L 512M vg_web -n lv_web2
+   55  sudo lvcreate -L 512M vg_web -n lv_web3
+   56  sudo lvs
+   57  sudo pvs
+   58  sudo fdisk -l
+   59  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   60  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   61  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   62  sudo pvs > pvs.txt
+   63  sudo vgs > vgs.txt
+   64  sudo lvs > lvs.txt
+   65  history > historial_lvm.txt
